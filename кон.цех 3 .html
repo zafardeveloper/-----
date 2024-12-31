@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кондитерская Асали</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Кондитерская Асали</h1>
+
+    <!-- Поле для поиска -->
+    <div class="search-bar">
+        <input type="text" id="search-input" onkeyup="searchProducts()" placeholder="Поиск товаров...">
+    </div>
+
+    <!-- Контейнер с товарами -->
+    <div class="container" id="product-container">
+        <div class="product">
+            <img src="./фото/24fe67a0944e8c70fd5b37277353b58f.jpg" alt="Пряник">
+            <div class="product-info">
+                <h2>Пряник</h2>
+                <p>Вкусный медовый пряник с глазурью, который идеально подойдет к чаю. Натуральные ингредиенты.</p>
+                <div class="price">Цена: 50 руб.</div>
+                <div class="order-section">
+                    Количество: <input type="number" value="1" id="quantity-gingerbread">
+                    <a href="#" class="order-btn" onclick="addToCart('gingerbread', 50)">Заказать</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="./фото/i (5).webp" alt="Кекс">
+            <div class="product-info">
+                <h2>Кекс</h2>
+                <p>Нежный кекс с ванильной начинкой. Идеальный выбор для праздников и уютных вечеров.</p>
+                <div class="price">Цена: 70 руб.</div>
+                <div class="order-section">
+                    Количество: <input type="number" value="1" id="quantity-cupcake">
+                    <a href="#" class="order-btn" onclick="addToCart('cupcake', 70)">Заказать</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="./фото/70696d614daa6e8220dc59aaade1a315.jpg" alt="Печенье">
+            <div class="product-info">
+                <h2>Печенье</h2>
+                <p>Рассыпчатое печенье с шоколадной крошкой. Вкус детства и теплые воспоминания.</p>
+                <div class="price">Цена: 40 руб.</div>
+                <div class="order-section">
+                    Количество: <input type="number" value="1" id="quantity-cookie">
+                    <a href="#" class="order-btn" onclick="addToCart('cookie', 40)">Заказать</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Отображение итоговой суммы заказа -->
+    <div id="total-price">Итоговая сумма: 0 руб.</div>
+
+    <a href = "./кон.цех 2.html">Следующая... </a>
+<script src="./app.js"></script>
+</body>
+</html>

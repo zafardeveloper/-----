@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация - Асали</title>
+    <style>
+        /* Стили для центрирования формы на странице */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #fcfcfc;
+        }
+        .auth-form {
+            width: 300px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        .auth-form h2 {
+            text-align: center;
+            color: #6d2105;
+            margin-bottom: 20px;
+        }
+        .auth-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        .auth-form input[type="text"],
+        .auth-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+        .auth-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #6d2105;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .auth-form button:hover {
+            background-color: #4e1503;
+        }
+        .auth-form a {
+            display: block;
+            text-align: center;
+            color: #6d2105;
+            margin-top: 10px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .auth-form a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-form">
+        <h2>Вход в Асали</h2>
+        <form id="loginForm">
+            <label for="username">Логин</label>
+            <input type="text" id="username" required>
+
+            <label for="password">Пароль</label>
+            <input type="password" id="password" required>
+
+            <button type="submit">Войти</button>
+            <a href="#">Забыли пароль?</a>
+        </form>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Останавливаем стандартное поведение формы
+
+            // Получаем значения логина и пароля
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Здесь должна быть логика проверки (например, AJAX запрос на сервер)
+            // Для простоты, будем использовать фиксированные значения
+            if (username === 'user' && password === '1111') {
+                // Если данные верные, сохраняем информацию в localStorage
+                localStorage.setItem('loggedIn', 'true');
+                // Перенаправление на главную страницу
+                window.location.href = 'Кон.цех.html';
+            } else {
+                alert('Неверный логин или пароль!');
+            }
+        });
+    </script>
+</body>
+</html>
